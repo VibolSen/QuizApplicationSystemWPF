@@ -1,14 +1,25 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
-namespace QuizApplicationSystem.View
+namespace QuizApplicationSystemWPF.View
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for RegisterView.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class RegisterView : Window
     {
-        public LoginView()
+        public RegisterView()
         {
             InitializeComponent();
         }
@@ -29,15 +40,5 @@ namespace QuizApplicationSystem.View
             Application.Current.Shutdown();
         }
 
-        private void btnlogin_Click(object sender, RoutedEventArgs e)
-        {
-            // Your login logic here
-            MessageBox.Show("Login button clicked!");
-        }
-
-        private void txtUser_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
-        }
     }
 }

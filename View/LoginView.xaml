@@ -32,8 +32,8 @@
 
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                    <GradientStop Color="#060531" Offset="0"/>
-                    <GradientStop Color="#1B1448" Offset="0.75"/>
+                    <GradientStop Color="#5AB2FF" Offset="0"/>
+                    <GradientStop Color="#0F67B1" Offset="0.50"/>
                 </LinearGradientBrush>
             </Border.Background>
 
@@ -51,9 +51,9 @@
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="LOG IN"
-                               Foreground="DarkGray"
-                               FontSize="10"
+                    <TextBlock Text="Register"
+                               Foreground="LightGray"
+                               FontSize="12"
                                FontFamily="Montserrat"
                                Grid.Column="0"
                                VerticalAlignment="Center"
@@ -169,13 +169,13 @@
                              CaretBrush="LightGray"
                              BorderBrush="DarkGray"
                              BorderThickness="0,0,0,2"
-                             Height="28"
+                             Height="30"
                              VerticalContentAlignment="Center"
                              Margin="0,5,0,0"
-                             Padding="30,0,0,0">
+                             Padding="30,0,0,0" TextChanged="txtUser_TextChanged">
 
                         <TextBox.Background>
-                            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\user1.png"
+                            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\usericon.png"
                                         Stretch="Uniform"
                                         AlignmentX="Left"
                                         AlignmentY="Center"/>
@@ -197,13 +197,13 @@
                              CaretBrush="LightGray"
                              BorderBrush="DarkGray"
                              BorderThickness="0,0,0,2"
-                             Height="28"
+                             Height="30"
                              VerticalContentAlignment="Center"
                              Margin="0,5,0,0"
                              Padding="30,0,0,0">
 
                         <PasswordBox.Background>
-                            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\user1.png"
+                            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\key_.png"
                                         Stretch="Uniform"
                                         AlignmentX="Left"
                                         AlignmentY="Center"/>
