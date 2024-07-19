@@ -28,5 +28,11 @@ namespace QuizApplicationSystem.View
         {
             Application.Current.Shutdown();
         }
+
+        private void btnlogin_Click(object sender, RoutedEventArgs e)
+        {
+            // Your login logic here
+            MessageBox.Show("Login button clicked!");
+        }
     }
 }
