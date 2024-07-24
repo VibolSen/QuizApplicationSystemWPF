@@ -15,7 +15,7 @@
 
     <Border CornerRadius="10">
         <Border.Background>
-            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\Background.jpg"
+            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\Background1.jpg"
                         Stretch="UniformToFill"/>
         </Border.Background>
 
@@ -47,6 +47,18 @@
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
 
+                    <TextBlock Foreground="LightGray"
+                               FontSize="12"
+                               FontFamily="Montserrat"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0">
+                        <Run Text="Ready have an account? "/>
+                        <Hyperlink Foreground="LightGray"
+                                   Click="login_Click">
+                            <Run Text="login"/>
+                        </Hyperlink>
+                    </TextBlock>
+
                     <Button x:Name="btnMinimize"
                             Background="#28AEED"
                             BorderThickness="0"
@@ -57,7 +69,6 @@
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMinimize_Click">
-
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#28AEED"/>
@@ -68,7 +79,6 @@
                                 </Style.Triggers>
                             </Style>
                         </Button.Style>
-
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border Width="18" 
@@ -80,7 +90,6 @@
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
-
                     </Button>
 
                     <Button x:Name="btnClose"
@@ -93,7 +102,6 @@
                             Cursor="Hand"
                             Grid.Column="2"
                             Click="btnClose_Click">
-
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#DA34AE"/>
@@ -104,7 +112,6 @@
                                 </Style.Triggers>
                             </Style>
                         </Button.Style>
-
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border Width="18" Height="18"
@@ -116,13 +123,122 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
                 </Grid>
 
+                <StackPanel Width="220"
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Margin="0,35,0,0">
+
+                    <Image Source="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\STEPLogo.png"
+                           Width="150" Height="150"/>
+
+                    <TextBlock Text="QUIZ Application"
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Starting to Quiz is useful no matter what your career ambitions are."
+                               Foreground="LightGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+                    <TextBlock Text="Username"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="0,35,0,0"/>
+
+                    <TextBox x:Name="txtUser"
+                             Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"
+                             Padding="30,0,0,0"
+                             TextChanged="txtUser_TextChanged">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\usericon.png"
+                                        Stretch="Uniform"
+                                        AlignmentX="Left"
+                                        AlignmentY="Center"/>
+                        </TextBox.Background>
+                    </TextBox>
+
+                    <TextBlock Text="Password"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="0,15,0,0"/>
+
+                    <PasswordBox x:Name="txtPass"
+                                 FontSize="13"
+                                 FontWeight="Medium"
+                                 FontFamily="Montserrat"                            
+                                 Foreground="White"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="DarkGray"
+                                 BorderThickness="0,0,0,2"
+                                 Height="30"
+                                 VerticalContentAlignment="Center"
+                                 Margin="0,5,0,0"
+                                 Padding="30,0,0,0">
+                        <PasswordBox.Background>
+                            <ImageBrush ImageSource="D:\1_STEP Acadermy\Term2.2\Win_Form_WPF\QuizApplicationSystemWPF\Image\key_.png"
+                                        Stretch="Uniform"
+                                        AlignmentX="Left"
+                                        AlignmentY="Center"/>
+                        </PasswordBox.Background>
+                    </PasswordBox>
+
+                    <Button x:Name="btnRegister"
+                            Background="#462AD8"
+                            BorderThickness="0"
+                            Content="Register"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Margin="0,25,0,0"
+                            Click="btnRegister_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#28AEED"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" 
+                                        Height="30"
+                                        CornerRadius="10"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
             </Grid>
-
         </Border>
-
     </Border>
-
 </Window>
